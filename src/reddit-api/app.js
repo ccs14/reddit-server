@@ -1,4 +1,4 @@
-import * as Reddit from "../API/Reddit.js";
+import * as Reddit from "./API/Reddit.js";
 import express from "express";
 import cors from "cors";
 const app = express();
