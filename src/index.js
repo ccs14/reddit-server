@@ -15,12 +15,6 @@ import * as Reddit from "./API/Reddit.js";
     // };
 
     // await Redis.SetKeyAsync("simple2", JSON.stringify(o));
-
-    // let res1 = await Redis.GetKeyOrNullAsync("test1");
-    // console.log("🚀 ~ file: index.js:14 ~ res1:", res1);
-    // await Redis.SetKeyAsync("test1", o);
-    // let res3 = await Redis.GetKeyOrNullAsync("test1");
-    // console.log("🚀 ~ file: index.js:18 ~ res3:", res3);
   } catch (error) {
     console.log("error: ", error);
   }
