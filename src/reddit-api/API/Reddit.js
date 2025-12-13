@@ -1,5 +1,5 @@
 import axios from "axios";
-import * as Redis from "../Redis/Redis.js";
+import * as Redis from "../Messaging/Redis.js";
 
 export const getRandomPost = async (subredditName) => {
   const redditUrl = `http://www.reddit.com/r/${subredditName}/.json`;
