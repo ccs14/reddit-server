@@ -120,3 +120,8 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+
+src/analytics-service/AnalyticsApi/.idea
+src/analytics-service/AnalyticsApi/obj/*
+src/analytics-service/AnalyticsApi/bin/*
