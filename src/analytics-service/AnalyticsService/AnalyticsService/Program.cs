@@ -1,3 +1,5 @@
+using AnalyticsService.Infrastructure.Messaging;
+using AnalyticsService.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,7 +12,7 @@ builder.Services.AddDbContext<AnalyticsDbContext>(opt =>
     opt.UseNpgsql(builder.Configuration.GetConnectionString("AnalyticsDb")));
 
 // Rabbit consumer background service
-builder.Services.AddHostedService<>();
+builder.Services.AddHostedService<RabbitMqConsumerHostedService>();
 
 // Controllers + Swagger
 builder.Services.AddControllers();
