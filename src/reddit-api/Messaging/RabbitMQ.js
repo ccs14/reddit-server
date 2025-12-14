@@ -1,7 +1,7 @@
 import amqp from "amqplib";
 import { info, warn, error, debug } from "../Logger/Logger.js";
 
-const RABBIT_URL = "amqp://docker:docker@rabbitmq/";
+const RABBIT_URL = process.env.RABBITMQ_URL;
 const QUEUE_NAME = "reddit_queue";
 
 // https://www.rabbitmq.com/tutorials/tutorial-one-javascript

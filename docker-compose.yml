@@ -27,7 +27,8 @@ services:
       context: ./src/reddit-api
       dockerfile: Dockerfile
     environment:
-      - APP_DEBUG=0 
+      - APP_DEBUG=0
+      - RABBITMQ_URL=amqp://docker:docker@rabbitmq/
     container_name: reddit-api
     ports:
       - "3001:3001"

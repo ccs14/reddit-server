@@ -1,27 +1,39 @@
 # reddit-server
 
 To start...
-run: "docker-compose up -d"
+run:
 
-# URLs
+- **docker-compose up -d**
 
-API Health:
+# TODO
 
-- http://localhost:3001
+- System Design doc
+- Analytics Service in dotnet
+  - Pull messages from RabbitMQ
+  - Write to db
+  - Expose analytics API
 
-Samples:
+# Future State
 
-- Random:
-  - http://localhost:3001/random?subreddit=hiking&range=day
-  - http://localhost:3001/random?subreddit=dotnet&range=year
-- Top:
-  - http://localhost:3001/top?subreddit=learnmachinelearning&range=day
-  - http://localhost:3001/top?subreddit=hiking&range=year
+Front End
 
-Redis:
+- Simple frontend with a fixed size textbox to take in the subreddit name
+- Dropdown for the top/random param
+- Dropdown for the day/year param
+- Add auth service and login page to access
+- Toggle to disable auth for quick testing/demo purposes
 
-- http://localhost:6379
+Auth Service
 
-RabbitMQ Manager:
+- Okta / Oauth2
+- Handle creds from database
+  - salted and hashed at rest
 
-- http://localhost:15672/
+Login Service
+
+- Called by UI/frontend
+- Could handle new account creation and call auth service downstream
+- Handle user creation/logins with datastore
+- Hashed and salted passwords at rest in db
+- Separating the auth service could be overkill/unnecessary
+  - Need to investigate controllers and what is needed to make the right sizing/complexity considerations
