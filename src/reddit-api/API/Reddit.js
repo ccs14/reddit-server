@@ -40,7 +40,7 @@ export const getRandomPost = async (subredditName) => {
       await Redis.SimpleSet(key, data, 3600);
 
       // post to rabbitmq for analytics
-      await RabbitMQ.sendMessage(data);
+      await RabbitMQ.sendMessage(data, "reddit_random_queue");
 
       return post;
     }
@@ -80,7 +80,7 @@ export const getTopPosts = async (subredditName, range) => {
       await Redis.SimpleSet(key, data, 3600);
 
       // add message for analytics
-      await RabbitMQ.sendMessage(data);
+      await RabbitMQ.sendMessage(data, "reddit_top_queue");
 
       return posts;
     }

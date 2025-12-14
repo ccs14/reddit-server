@@ -2,10 +2,9 @@ import amqp from "amqplib";
 import { info, warn, error, debug } from "../Logger/Logger.js";
 
 const RABBIT_URL = process.env.RABBITMQ_URL;
-const QUEUE_NAME = "reddit_queue";
 
 // https://www.rabbitmq.com/tutorials/tutorial-one-javascript
-export const sendMessage = async (message) => {
+export const sendMessage = async (message, queue_name) => {
   try {
     debug("connecting to rabbitmq");
     const connection = await amqp.connect(RABBIT_URL);
@@ -19,7 +18,7 @@ export const sendMessage = async (message) => {
     connection.on("close", () => console.log("connection closed"));
     connection.on("error", (e) => error("connection error:", e.message));
 
-    await channel.assertQueue(QUEUE_NAME, { durable: true });
+    await channel.assertQueue(queue_name, { durable: true });
 
     let data = "";
     if (typeof message === "string") {
@@ -28,7 +27,7 @@ export const sendMessage = async (message) => {
       data = JSON.stringify(message);
     }
 
-    channel.sendToQueue(QUEUE_NAME, Buffer.from(data), { persistent: true });
+    channel.sendToQueue(queue_name, Buffer.from(data), { persistent: true });
     info("🚀 ~ sendMessage ~ Sent message to queue:", message);
 
     await channel.close();
