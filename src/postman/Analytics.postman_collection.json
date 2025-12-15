@@ -1,0 +1,68 @@
+{
+	"info": {
+		"_postman_id": "cc3a0db0-1029-4052-a8d5-12e3e6c1be4d",
+		"name": "Analytics",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18249950"
+	},
+	"item": [
+		{
+			"name": "Stats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5152/stats/counts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5152",
+					"path": [
+						"stats",
+						"counts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5152/health",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5152",
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ready",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5152/ready",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5152",
+					"path": [
+						"ready"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
