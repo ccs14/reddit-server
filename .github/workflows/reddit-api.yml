@@ -1,0 +1,36 @@
+name: reddit-api
+
+on:
+  push:
+    paths:
+      - "src/reddit-api/**"
+      - ".github/workflows/reddit-api.yml"
+  pull_request:
+    paths:
+      - "src/reddit-api/**"
+      - ".github/workflows/reddit-api.yml"
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: src/reddit-api
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: "src/reddit-api/package-lock.json"
+
+      - name: Install
+        run: npm ci
+
+      - name: Format check
+        run: npm run pretty:check
+
+      - name: Test
+        run: npm test

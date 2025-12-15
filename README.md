@@ -1,9 +1,12 @@
-# reddit-server
+# system-demo
 
-To start...
-run:
+To start, run:
 
-- **docker-compose up -d**
+docker-compose up -d
+
+[![reddit-api](https://github.com/ccs14/system-demo/actions/workflows/reddit-api.yml/badge.svg)](https://github.com/ccs14/system-demo/actions/workflows/reddit-api.yml)
+
+[![analytics-service](https://github.com/ccs14/system-demo/actions/workflows/analytics-service.yml/badge.svg)](https://github.com/ccs14/system-demo/actions/workflows/analytics-service.yml)
 
 # TODO
 
