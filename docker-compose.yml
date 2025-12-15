@@ -53,6 +53,22 @@ services:
       timeout: 3s
       retries: 10
 
+  analytics-service:
+    restart: no
+    build:
+      context: ./src/analytics-service
+      dockerfile: ./AnalyticsService/AnalyticsService/Dockerfile
+    container_name: analytics-service
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+    ports:
+      - "5152:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_started
+
 networks:
   default:
     name: pizzanet
