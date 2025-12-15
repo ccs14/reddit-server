@@ -1,5 +1,5 @@
 {
-  "name": "reddit-server",
+  "name": "reddit-api",
   "version": "1.0.0",
   "description": "",
   "author": "",
@@ -9,8 +9,9 @@
   "scripts": {
     "babel-node": "babel-node --presets=@babel/preset-env",
     "start": "nodemon --exec npm run babel-node -- src/Server/app.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "pretty": "prettier --write \"./**/*.{js,jsx,ts,tsx,json}\""
+    "test": "echo \"(no tests yet)\" && exit 0",
+    "pretty": "prettier --write \"./**/*.{js,jsx,ts,tsx,json}\"",
+    "pretty:check": "prettier --check \"./**/*.{js,jsx,ts,tsx,json}\""
   },
   "dependencies": {
     "amqplib": "^0.10.9",
