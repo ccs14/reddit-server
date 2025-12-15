@@ -1,3 +1,7 @@
+## ENTRY POINT
+
+src/reddit-api/app.js
+
 ## API
 
 Health:

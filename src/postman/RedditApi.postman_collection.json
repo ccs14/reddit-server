@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "fb1f84df-20a0-444b-a438-a31b351ac963",
-		"name": "Reddit",
+		"name": "RedditApi",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "18249950"
 	},
@@ -64,7 +64,7 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:3001/random?subreddit=dotnet&range=year",
+					"raw": "http://localhost:3001/random?subreddit=hiking&range=year",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -76,7 +76,7 @@
 					"query": [
 						{
 							"key": "subreddit",
-							"value": "dotnet"
+							"value": "hiking"
 						},
 						{
 							"key": "range",
@@ -111,7 +111,7 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:3001/top?subreddit=learnmachinelearning&range=day",
+					"raw": "http://localhost:3001/top?subreddit=hiking&range=day",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -123,7 +123,7 @@
 					"query": [
 						{
 							"key": "subreddit",
-							"value": "learnmachinelearning"
+							"value": "hiking"
 						},
 						{
 							"key": "range",
@@ -158,7 +158,7 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:3001/top?subreddit=dotnet&range=day",
+					"raw": "http://localhost:3001/top?subreddit=hiking&range=year",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -170,11 +170,11 @@
 					"query": [
 						{
 							"key": "subreddit",
-							"value": "dotnet"
+							"value": "hiking"
 						},
 						{
 							"key": "range",
-							"value": "day"
+							"value": "year"
 						}
 					]
 				}

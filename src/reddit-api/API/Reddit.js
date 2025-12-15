@@ -4,6 +4,8 @@ import * as RabbitMQ from "../Messaging/RabbitMQ.js";
 import { info, warn, error, debug } from "../Logger/Logger.js";
 
 export const getRandomPost = async (subredditName) => {
+  // TODO: how to implement cache for a random post?
+
   try {
     const redditUrl = `http://www.reddit.com/r/${subredditName}/.json`;
 
@@ -17,8 +19,8 @@ export const getRandomPost = async (subredditName) => {
     if (response && response.status === 200) {
       const children = response.data.data.children;
 
-      const index = Math.floor(Math.random() * children.length);
-      const randomPost = children[index].data;
+      const randomIndex = Math.floor(Math.random() * children.length);
+      const randomPost = children[randomIndex].data;
 
       const post = {
         id: randomPost.id,
@@ -80,7 +82,6 @@ export const getTopPosts = async (subredditName, range) => {
         posts.push(post);
       }
 
-      // add response to cache
       const data = JSON.stringify(posts);
 
       // add to cache
