@@ -8,18 +8,19 @@ docker-compose up -d
 
 [![analytics-service](https://github.com/ccs14/system-demo/actions/workflows/analytics-service.yml/badge.svg)](https://github.com/ccs14/system-demo/actions/workflows/analytics-service.yml)
 
-# TODO
+![design](design/system-design.png)
 
-- System Design doc
+# Future State
+
+Tests
 
 - Add unit tests reddit api
 - Add tests analytics
 
-# Future State
-
 CI/CD
 
-- Pipeline for Unit Tests
+- Add unit tests to Github Actions
+- Jenkins is another option in a separate container with custom jobs
 
 Logging
 
