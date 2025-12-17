@@ -1,4 +1,4 @@
-# system-demo
+# System-Demo
 
 To start, run:
 
@@ -9,6 +9,13 @@ docker-compose up -d
 [![analytics-service](https://github.com/ccs14/system-demo/actions/workflows/analytics-service.yml/badge.svg)](https://github.com/ccs14/system-demo/actions/workflows/analytics-service.yml)
 
 ![design](design/system-design.png)
+
+# Overview
+
+- This is an always-in-progress system I use to practice building and learning modern technologies.
+- I learn best by doing, this repo is where I prototype, iterate quickly, and stay hands-on throughout the process.
+- Some components exist mainly to demonstrate concepts or explore specific tools/patterns, even if they aren’t strictly “needed” for the core app.
+- Future ideas are listed below (not in priority order).
 
 # Future State
 
@@ -22,8 +29,8 @@ Analytics Service
 
 Tests
 
-- Add tests for reddit api
-- Add tests for analytics
+- Add tests for reddit api (Jest?)
+- Add tests for analytics (NUnit)
 
 CI/CD
 
