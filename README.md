@@ -12,10 +12,18 @@ docker-compose up -d
 
 # Future State
 
+Analytics Service
+
+- Expand features and software design to illustrate SOLID principals
+- Add test project
+- Add tests to CI/CD pipeline
+- Record counts for each unique subreddit that is consumed (will need to re-work Rabbit payload and data models)
+- Expand API reporting
+
 Tests
 
-- Add unit tests reddit api
-- Add tests analytics
+- Add tests for reddit api
+- Add tests for analytics
 
 CI/CD
 
