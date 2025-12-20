@@ -77,3 +77,4 @@ Login Service
 - Read data from rabbit and write to postgres
 - Read analytics data from postgres with api
 - Create CI github action for analytics service
+- Localstack added to migrate to a traditional cloud workflow, but none of it is hooked up in the system
