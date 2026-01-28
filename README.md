@@ -73,7 +73,6 @@ Other
   - producer
   - consumer
   - add auth
-
 - Async Patterns
   - async/await
   - SemaphoreSlim
